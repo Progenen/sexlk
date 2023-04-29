@@ -1,0 +1,149 @@
+@@include('./parts/header.html')
+<div class="container">
+    <div class="row">
+        @@include('./parts/sidebar.html')
+        <main class="ankets main col-lg-9">
+            <h2 class="ankets__title title">
+                Мои Анкеты
+            </h2>
+            <form class="ankets__filters">
+                <div class="ankets__filters-checkall">
+                    <div class="ankets__fitlers-checkall-checkbox">
+                        <input type="checkbox" id="checkAll">
+                        <label for="checkAll">Отметить все</label>
+                    </div>
+                </div>
+                <button class="ankets__filters-btn ankets__filters-btn--fill">
+                    <svg width="17" height="24" viewBox="0 0 17 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M3.67129 8.39588L3.67129 14.6522C3.67129 14.8788 3.8102 15.0149 3.99532 15.0149L13.159 15.0149C13.3903 15.0149 13.5293 14.8788 13.5293 14.6522L13.5293 8.39588H16.4911L8.67 0.960675L0.709595 8.39588H3.67129ZM4.18043 23.0846H13.02C13.7143 23.0846 13.7143 21.5431 13.02 21.5431H4.18043C3.48617 21.5431 3.48617 23.0846 4.18043 23.0846ZM4.18043 20.4097H13.02C13.7143 20.4097 13.7143 18.8682 13.02 18.8682H4.18043C3.48617 18.8682 3.48617 20.4097 4.18043 20.4097ZM4.18043 17.7349H13.02C13.7143 17.7349 13.7143 16.1934 13.02 16.1934H4.18043C3.48617 16.1934 3.48617 17.7349 4.18043 17.7349Z"
+                            fill="white" />
+                    </svg>
+
+                    <span>Поднять</span>
+                </button>
+                <button class="ankets__filters-btn">
+                    <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M20.1888 3.27999H14.8824V2.01283C14.8824 1.32648 14.2224 0.772034 13.404 0.772034H7.59604C6.75114 0.772034 6.11768 1.32653 6.11768 2.01283V3.27999H0.811282C0.388839 3.27999 0.0457764 3.62324 0.0457764 4.04549C0.0457764 4.46794 0.389033 4.811 0.811282 4.811L2.05208 4.81118L3.21373 19.0144C3.21373 20.5719 4.50738 21.8656 6.09128 21.8656H14.9089C16.493 21.8656 17.7864 20.5984 17.7864 19.0407L18.9481 4.78469H20.1889C20.6113 4.78469 20.9544 4.44143 20.9544 4.01918C20.9546 3.59656 20.6113 3.27979 20.1889 3.27979L20.1888 3.27999ZM7.62239 2.30323H13.3776V3.30648L7.62239 3.3063V2.30323ZM8.12404 17.0344C7.70159 17.0344 7.35853 16.6912 7.35853 16.2952L7.04179 8.90323C7.01545 8.71834 7.09464 8.50731 7.22668 8.34874C7.35871 8.2167 7.54342 8.11118 7.75463 8.11118C7.96585 8.08485 8.15055 8.16403 8.30912 8.29607C8.46749 8.45444 8.54668 8.63933 8.54668 8.85057L8.88994 16.2426C8.88957 16.6912 8.54629 17.0344 8.12404 17.0344ZM13.6944 16.3216C13.6416 16.744 13.3248 17.0344 12.9024 17.0344C12.6648 17.0344 12.4799 16.9552 12.3479 16.7969C12.1895 16.6385 12.1367 16.4273 12.163 16.2161L12.5326 8.82408C12.5854 8.40163 12.9285 8.11123 13.3246 8.11123H13.351C13.7469 8.16408 14.0373 8.50715 14.0373 8.90328L13.6944 16.3216Z"
+                            fill="#4926E8" />
+                    </svg>
+
+                    <span>Удалить</span>
+                </button>
+                <div class="ankets__filters-btn ankets__filters-turnoff">
+                    <input type="checkbox" id="turnOff">
+                    <label for="turnOff">Вкл/Выкл</label>
+                </div>
+                <div class="ankets__filters-select ankets__filters-btn">
+                    <select name="tarif">
+                        <option>Назначить тариф</option>
+                        <option value="tarif1">Тариф 1</option>
+                        <option value="tarif2">Тариф 2</option>
+                        <option value="tarif3">Тариф 3</option>
+                    </select>
+                </div>
+                <div class="ankets__filters-select ankets__filters-btn">
+                    <select name="showAnkets">
+                        <option value="allAnkets">Все анкеты</option>
+                        <option value="smallAnkets">Поменьше анкет</option>
+                        <option value="bigAnkets">Побольше анкет</option>
+                    </select>
+                </div>
+            </form>
+            <div class="ankets__items">
+                <div class="ankets__item">
+                    <div class="ankets__item-header">
+                        <span class="ankets__item-moder">
+                            на модерации
+                        </span>
+                        <img src="images/ankets-avatar.png" alt="" class="ankets__item-img">
+                    </div>
+                    <div class="ankets__item-body">
+                        <div class="ankets__item-field ankets__item-title">
+                            <h3 class="ankets__item-title-text">
+                                Ирина
+                            </h3>
+                            <svg>
+                                <use xlink:href='svg/dest/stack/sprite.svg#verif'></use>
+                            </svg>
+                        </div>
+                        <a href="#" class="ankets__item-phone">
+                            <span>
+                                <svg>
+                                    <use xlink:href='svg/dest/stack/sprite.svg#phone'></use>
+                                </svg>
+                            </span>
+                            <span>
+                                8 900 900 00 00
+                            </span>
+                        </a>
+                        <div class="ankets__item-metrolist metrolist">
+                            <a class="ankets__item-metrolis-item metrolist__item">
+                                <span>
+                                    <svg>
+                                        <use xlink:href='svg/dest/stack/sprite.svg#metro'></use>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Арбатская
+                                </span>
+                            </a>
+                        </div>
+                        <div class="ankets__item-locallist locallist">
+                            <a class="ankets__item-locallist-item locallist__item">
+                                <span>
+                                    <svg>
+                                        <use xlink:href='svg/dest/stack/sprite.svg#location'></use>
+                                    </svg>
+                                </span>
+                                <span>
+                                    Москва
+                                </span>
+                            </a>
+                        </div>
+                        <div class="ankets__item-field ankets__item-ui">
+                            <a class="ankets__item-ui-item ankets__item-ui-item--1" href="#">
+                                <svg>
+                                    <use xlink:href='svg/dest/stack/sprite.svg#pencil'></use>
+                                </svg>
+                            </a>
+                            <a class="ankets__item-ui-item ankets__item-ui-item--2" href="#">
+                                <svg>
+                                    <use xlink:href='svg/dest/stack/sprite.svg#up'></use>
+                                </svg>
+                            </a>
+                            <a class="ankets__item-ui-item ankets__item-ui-item--3" href="#">
+                                <svg>
+                                    <use xlink:href='svg/dest/stack/sprite.svg#trash'></use>
+                                </svg>
+                            </a>
+                            <a class="ankets__item-ui-item ankets__item-ui-item--4" href="#">
+                                <svg>
+                                    <use xlink:href='svg/dest/stack/sprite.svg#turn'></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ankets__item-footer">
+                        <select class="ankets__item-tarif" name="tarif" id="">
+                            <option  class="ankets__item-tarif-option ankets__item-tarif-option--1" value="1">
+                                <img src="images/icons/diamond1.png" alt="">
+                                тариф1
+                            </option>
+                            <option class="ankets__item-tarif-option ankets__item-tarif-option--2" value="2">
+                                <span>dsds</span>
+                                тариф2
+                            </option>
+                            <option class="ankets__item-tarif-option ankets__item-tarif-option--3" value="3">
+                                тариф3
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</div>
+</div>
+@@include('./parts/footer.html')

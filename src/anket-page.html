@@ -1,0 +1,53 @@
+@@include('./parts/header.html')
+<div class="container">
+    <div class="row">
+        @@include('./parts/sidebar.html')
+        <main class="main col-lg-9">
+            <form class="anket">
+                
+                <h1 class="anket__title title">Создать анкету</h1>
+                <h2 class="anket__subtitle subtitle">
+                    Главное фото
+                </h2>
+                <div class="anket__main anket__block">
+                    <div class="anket__main-photo">
+                        <button class="anket__main-photo-delete" tabindex>
+                            <svg>
+                                <use xlink:href='svg/dest/stack/sprite.svg#cross'></use>
+                            </svg>
+                        </button>
+                        <img class="anket__main-photo-img" data-placeholder="images/graphics/user-placeholder.png" alt="">
+                        <div class="anket__main-photo-input">
+                            <label for="anketPhoto" tabindex="0">+</label>
+                            <input type="file" name="photo" id="anketPhoto">
+                        </div>
+                    </div>
+                    <div class="anket__main-info">
+                        <div class="anket__main-info-item input-wrap">
+                            <label for="anketName">Имя</label>
+                            <input type="text" class="anket__main-info-input input" id="anketName">
+                        </div>
+                        <div class="anket__main-info-item input-wrap">
+                            <label for="anketAge">Возраст</label>
+                            <input type="text" class="anket__main-info-input input" id="anketAge">
+                        </div>
+                        <div class="anket__main-info-item input-wrap">
+                            <label for="anketPhone">Телефон</label>
+                            <input type="text" class="anket__main-info-input input" id="anketPhone">
+                        </div>
+                        <div class="anket__main-info-item input-wrap">
+                            <label for="anketTelegram">Telegram</label>
+                            <input type="text" class="anket__main-info-input input" id="anketTelegram">
+                        </div>
+                        <div class="anket__main-info-item input-wrap">
+                            <label for="anketWhats">WhatsApp</label>
+                            <input type="text" class="anket__main-info-input input" id="anketWhats">
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+</div>
+</div>
+@@include('./parts/footer.html')

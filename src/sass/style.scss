@@ -1,8 +1,16 @@
 // Libs
+@import "../../node_modules/bootstrap/dist/css/bootstrap-grid.css";
+@import "../../node_modules/jquery-nice-select/css/nice-select.css";
 
 // Main
 @import "support";
 @import "all";
 @import "script-classes";
 @import "header";
+@import "sidebar";
+@import "blocks/none-ankets";
+@import "pages/ankets.scss";
+@import "pages/ammount.scss";
+@import "pages/anket.scss";
 @import "footer";
+@import "media";

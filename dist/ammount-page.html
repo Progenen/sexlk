@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zlatmax | Development Version</title>
+    <script src="JS/startIndex.js"></script>
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="content">
+            <header class="header">
+                <div class="container">
+                    <div class="header__row row">
+                        <div class="header__col--logo col-lg-2 col-md-2 col-6">
+                            <a href="#" class="header__logo">
+                                <img src="images/logo.png" alt="" class="header__logo-img">
+                            </a>
+                        </div>
+                        <div class="header__col--burger col-lg-2 col-4">
+                            <div class="header__burger">
+                                <span></span><span></span><span></span>
+                            </div>
+                        </div>
+                        <div class="header__col--avatar col-lg-1 col-md-2">
+                            <!-- Чтобы указать картинку, нужно просто создать тег img без класса, она растянется так как надо. -->
+                            <a href="#" class="header__avatar" style="background-color: #4926E8;">
+                                АБ
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+<div class="container">
+    <div class="row">
+        <sidebar class="sidebar col-lg-3">
+    <div class="sidebar__stats">
+        <div class="sidebar__stats-item">
+            <svg class="sidebar__stats-icon">
+                <use xlink:href='svg/dest/stack/sprite.svg#wallet'></use>
+            </svg>
+            <div class="sidebar__stats-capt">Баланс:</div>
+            <div class="sidebar__stats-result">
+                1 800р
+            </div>
+            <a class="sidebar__stats-walletadd" href="#">
+            </a>
+        </div>
+        <div class="sidebar__stats-item">
+            <svg class="sidebar__stats-icon">
+                <use xlink:href='svg/dest/stack/sprite.svg#rate'></use>
+            </svg>
+            <div class="sidebar__stats-capt">Расход в час:</div>
+            <div class="sidebar__stats-result">
+            </div>
+        </div>
+        <div class="sidebar__stats-item">
+            <div class="sidebar__stats-capt">Хватит на N часов (дней)</div>
+            <div class="sidebar__stats-result">
+            </div>
+        </div>
+        <a class="btn-main sidebar__stats-button" href="#">
+            Пополнить баланс
+        </a>
+    </div>
+    <div class="sidebar__menu">
+        <nav class="sidebar__menu-nav">
+            <ul class="sidebar__menu-list">
+                <li class="sidebar__menu-item">
+                    <a href="#" class="sidebar__menu-link">
+                        <svg class="sidebar__menu-icon">
+                            <use xlink:href='svg/dest/stack/sprite.svg#user'></use>
+                        </svg>
+                        <span class="sidebar__menu-text">
+                            Добавить анкету
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#" class="sidebar__menu-link">
+                        <svg class="sidebar__menu-icon">
+                            <use xlink:href='svg/dest/stack/sprite.svg#user-card'></use>
+                        </svg>
+                        <span class="sidebar__menu-text">
+                            Мои анкеты (0/3)
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#" class="sidebar__menu-link">
+                        <img src="images/icons/nount-rate.svg" alt="" class="sidebar__menu-icon">
+                        <span class="sidebar__menu-text">
+                            Тарифы                                                                                                                                  
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#" class="sidebar__menu-link">
+                        <svg class="sidebar__menu-icon">
+                            <use xlink:href='svg/dest/stack/sprite.svg#feedback'></use>
+                        </svg>
+                        <span class="sidebar__menu-text">
+                            Обратная связь
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#" class="sidebar__menu-link">
+                        <img src="images/icons/invoice.svg" alt="" class="sidebar__menu-icon">
+                        <span class="sidebar__menu-text">
+                            История платежей
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#" class="sidebar__menu-link">
+                        <svg class="sidebar__menu-icon">
+                            <use xlink:href='svg/dest/stack/sprite.svg#instruction'></use>
+                        </svg>
+                        <span class="sidebar__menu-text">
+                            Инструкция
+                        </span>
+                    </a>
+                </li>
+                <li class="sidebar__menu-item">
+                    <a href="#" class="sidebar__menu-link">
+                        <svg class="sidebar__menu-icon">
+                            <use xlink:href='svg/dest/stack/sprite.svg#out'></use>
+                        </svg>
+                        <span class="sidebar__menu-text">
+                            Выйти
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</sidebar>
+        <main class="ammount main col-lg-9">
+            <h1 class="ammount__title title">Кошелек</h1>
+            <div class="ammount__info ammount__block">
+                <div class="ammount__info-balance">
+                    <h2 class="ammount__info-balance-title">
+                        Баланс
+                    </h2>
+                    <div class="ammount__info-balance-value">
+                        0
+                    </div>
+                    <div class="ammount__info-balance-descr">
+                        Пополните счет любым удобным ддля вас споссбом
+                    </div>
+                </div>
+                <form class="ammount__info-balance-repl">
+                    <label for="balanceReplCur">Введите сумму пополнения:</label>
+                    <div class="ammount__info-balance-repl-input-wrap">
+                        <span data-val="0">
+                            <input class="ammount__info-balance-repl-input" type="text" id="balanceReplCur" name="balanceCur" value="0"
+                                oninput="this.parentElement.setAttribute('data-val',  this.value)"
+                            >
+                        </span>
+                        руб
+                    </div>
+                    <div class="ammount__info-balance-repl-label">
+                        Выберите способ оплаты: 
+                    </div>
+                    <div class="ammount__info-balance-repl-radio-items">
+                        <div class="ammount__info-balance-repl-radio-item">
+                            <input type="radio" name="pay" value="qiwi" id="balanceReplQiwi" class="ammount__info-balance-repl-radio-input">
+                            <label for="balanceReplQiwi">
+                                <img src="images/icons/qiwi.png" alt="">
+                            </label>
+                        </div>
+                        <div class="ammount__info-balance-repl-radio-item">
+                            <input type="radio" name="pay" value="visaMastercard" id="balanceReplVisaMastercard" class="ammount__info-balance-repl-radio-input">
+                            <label for="balanceReplVisaMastercard">
+                                <img src="images/icons/visam.png" alt="">
+                            </label>
+                        </div>
+                        <div class="ammount__info-balance-repl-radio-item">
+                            <input type="radio" name="pay" value="mastercard" id="balanceReplMastercard" class="ammount__info-balance-repl-radio-input">
+                            <label for="balanceReplMastercard">
+                                <img src="images/icons/mastercard.png" alt="">
+                            </label>
+                        </div>
+                    </div>
+                    <button class="ammount__info-balance-repl-btn btn-main">Оплатить</button>
+                </form>
+            </div>
+            <h2 class="ammount__subtite subtitle">
+                Воспользуйтесь быстрым платежом для экономии времени. 
+            </h2>
+            <div class="ammount__fast-items ammount__block">
+                <div class="ammount__fast-item">
+                    <div class="ammount__fast-item-header">
+                        <div class="ammount__fast-item-balance">
+                            300 рублей
+                        </div>
+                        <a href="#" class="ammount__fast-item-btn btn-main">
+                            Оплатить
+                        </a>
+                    </div>
+                </div>
+                <div class="ammount__fast-item">
+                    <div class="ammount__fast-item-header">
+                        <div class="ammount__fast-item-balance">
+                            500 рублей
+                        </div>
+                        <a href="#" class="ammount__fast-item-btn btn-main">
+                            Оплатить
+                        </a>
+                    </div>
+                </div>
+                <div class="ammount__fast-item">
+                    <div class="ammount__fast-item-header">
+                        <div class="ammount__fast-item-balance">
+                            700 рублей
+                        </div>
+                        <a href="#" class="ammount__fast-item-btn btn-main">
+                            Оплатить
+                        </a>
+                    </div>
+                </div>
+                <div class="ammount__fast-item">
+                    <span class="ammount__fast-item-discount">
+                        -15%
+                    </span>
+                    <div class="ammount__fast-item-header">
+                        <div class="ammount__fast-item-balance">
+                            1000 руб.
+                        </div>
+                        <a href="#" class="ammount__fast-item-btn btn-main">
+                            Оплатить
+                        </a>
+                    </div>
+                    <span class="ammount__fast-item-sumbalance">
+                        Будет начислено: 1150р
+                    </span>
+                </div>
+                <div class="ammount__fast-item">
+                    <span class="ammount__fast-item-discount">
+                        -15%
+                    </span>
+                    <div class="ammount__fast-item-header">
+                        <div class="ammount__fast-item-balance">
+                            1500 руб.
+                        </div>
+                        <a href="#" class="ammount__fast-item-btn btn-main">
+                            Оплатить
+                        </a>
+                    </div>
+                    <span class="ammount__fast-item-sumbalance">
+                        Будет начислено: 1150р
+                    </span>
+                </div>
+                <div class="ammount__fast-item">
+                    <span class="ammount__fast-item-discount">
+                        -15%
+                    </span>
+                    <div class="ammount__fast-item-header">
+                        <div class="ammount__fast-item-balance">
+                            2 000 руб.
+                        </div>
+                        <a href="#" class="ammount__fast-item-btn btn-main">
+                            Оплатить
+                        </a>
+                    </div>
+                    <span class="ammount__fast-item-sumbalance">
+                        Будет начислено: 1150р
+                    </span>
+                </div>
+                <div class="ammount__fast-item">
+                    <span class="ammount__fast-item-discount">
+                        -15%
+                    </span>
+                    <div class="ammount__fast-item-header">
+                        <div class="ammount__fast-item-balance">
+                            2 500 руб.
+                        </div>
+                        <a href="#" class="ammount__fast-item-btn btn-main">
+                            Оплатить
+                        </a>
+                    </div>
+                    <span class="ammount__fast-item-sumbalance">
+                        Будет начислено: 1150р
+                    </span>
+                </div>
+                <div class="ammount__fast-item">
+                    <span class="ammount__fast-item-discount">
+                        -15%
+                    </span>
+                    <div class="ammount__fast-item-header">
+                        <div class="ammount__fast-item-balance">
+                            3 000 руб.
+                        </div>
+                        <a href="#" class="ammount__fast-item-btn btn-main">
+                            Оплатить
+                        </a>
+                    </div>
+                    <span class="ammount__fast-item-sumbalance">
+                        Будет начислено: 1150р
+                    </span>
+                </div>
+                <div class="ammount__fast-item">
+                    <span class="ammount__fast-item-discount">
+                        -15%
+                    </span>
+                    <div class="ammount__fast-item-header">
+                        <div class="ammount__fast-item-balance">
+                            3500 руб.
+                        </div>
+                        <a href="#" class="ammount__fast-item-btn btn-main">
+                            Оплатить
+                        </a>
+                    </div>
+                    <span class="ammount__fast-item-sumbalance">
+                        Будет начислено: 1150р
+                    </span>
+                </div>
+            </div>
+            <h2 class=" subtitle subtitle--light">Тарифный план</h2>
+            <div class="ammount__tarif-items ammount__block">
+                <div class="ammount__tarif-item">
+                    <div class="ammount__tarif-item-img">
+                        <img src="images/icons/diamond2.png" alt="">
+                    </div>
+                    <div class="ammount__tarif-name">
+                        ULTRA
+                    </div>
+                    <div class="ammount__tarif-descr">
+                        Этот тип анкеты отображается выше всех остальных анкет!
+                    </div>
+                    <a href="#" class="ammount__tarif-btn">
+                        Оплатить
+                    </a>
+                </div>
+                <div class="ammount__tarif-item">
+                    <div class="ammount__tarif-item-img">
+                        <img src="images/icons/diamond3.png" alt="">
+                    </div>
+                    <div class="ammount__tarif-name">
+                        GOLD
+                    </div>
+                    <div class="ammount__tarif-descr">
+                        Анкеты этого типа отображаются выше Silver, но ниже ULTRA
+                    </div>
+                    <a href="#" class="ammount__tarif-btn">
+                        Оплатить
+                    </a>
+                </div>
+                <div class="ammount__tarif-item">
+                    <div class="ammount__tarif-item-img">
+                        <img src="images/icons/diamond1.png" alt="">
+                    </div>
+                    <div class="ammount__tarif-name">
+                        SILVER
+                    </div>
+                    <div class="ammount__tarif-descr">
+                        Размещаются выше обычных анкет и имеют ротацию.
+                    </div>
+                    <a href="#" class="ammount__tarif-btn">
+                        Оплатить
+                    </a>
+                </div>
+            </div>
+            <h2 class="ammount__subtitle subtitle">
+                История денежных операций
+            </h2>
+            <div class="ammount__story ammount__block">
+                <table>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Дата:</th>
+                                <th>Сумма:</th>
+                            </tr>
+                        </thead>
+                    </table>	
+                    <div class="ammount__story-body">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                                <tr>
+                                    <td>17 апреля 2023 г</td>
+                                    <td>+ 3 435,8 руб.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>	
+                </table>
+            </div>
+            <h2 class="ammount__subtitle subtitle">
+                Если возникли сложности с оплатой свяжитесь с намии
+            </h2>
+            <form class="ammount__form ammount__block">
+                <div class="ammount__form-item input-wrap">
+                    <label for="ammountName">Имя</label>
+                    <input id="ammountName" type="text" id="" class="ammount__form-input input">
+                </div>
+                <div class="ammount__form-item input-wrap">
+                    <label for="ammountEame">E-mail</label>
+                    <input id="ammountEame" placeholder="" type="email" class="ammount__form-input input">
+                </div>
+                <div class="ammount__form-fileadd input-wrap">
+                    <input type="file" id="ammountFile" name="ammountFile">
+                    <label for="ammountFile">
+                        <svg>
+                            <use xlink:href='svg/dest/stack/sprite.svg#attach'></use>
+                        </svg>
+                        Прикрепить файл
+                    </label>
+                </div>
+                <div class="ammount__form-item ammount__form-item--textarea input-wrap">
+                    <textarea placeholder="Опишите проблему..." type="text" class="ammount__form-input ammount__form-textarea input textarea"></textarea>
+                </div>
+                <button type="submit" class="ammount__form-btn btn-main">
+                    Отправить
+                </button>
+            </form>
+        </main>
+    </div>
+</div>
+</div>
+<footer class="footer">
+
+</footer>
+<div class="mobile-menu">
+    <div class="mobile-menu__inner">
+        <a class="mobile-menu__ui">
+            Анна Бородач
+            <svg class="mobile-menu__ui-icon">
+                <use xlink:href='svg/dest/stack/sprite.svg#arrow-down'></use>
+            </svg>
+        </a>
+    </div>
+</div>
+</div>
+<script src="JS/bundle.js"></script>
+</body>
+
+</html>

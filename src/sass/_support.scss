@@ -65,9 +65,17 @@
 }
 
 // Fonts
-@include font-face('Roboto', '../fonts/Roboto/Roboto-Bold', bold, normal, ttf);
+@include font-face('Circe', '../fonts/Circe/circe-bold', bold, normal, ttf);
+@include font-face('Circe', '../fonts/Circe/circe-extrabold', 800, normal, ttf);
+@include font-face('Circe', '../fonts/Circe/circe-regular', 400, normal, ttf);
+@include font-face('Circe', '../fonts/Circe/circe-light', 300, normal, ttf);
+
+@include font-face('Ubuntu', '../fonts/Ubuntu/Ubuntu-regular', 400, normal, ttf);
+@include font-face('Ubuntu', '../fonts/Ubuntu/Ubuntu-bold', 700, normal, ttf);
 
 // Vars
+
+$color1: #4926E8;
 
 // Путь к спрайту для конкатенации
 

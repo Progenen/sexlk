@@ -197,19 +197,21 @@ document.addEventListener('DOMContentLoaded', function () {
 			const reader = new FileReader();
 	
 			reader.onload = function (e) {
-				delBtn.classList.toggle("active");
+				delBtn.classList.add("active");
 				img.setAttribute("src", e.target.result);
+				console.log(reader);
 			}
 	
 			reader.readAsDataURL(input.files[0]);
-		}
 
-		delBtn.addEventListener("click", (e) => {
-			e.preventDefault();
-			console.log('ds');
-			delBtn.classList.toggle("active");
-			img.setAttribute("src", img.getAttribute('data-placeholder'))
-		});
+			delBtn.addEventListener("click", (e) => {
+				e.preventDefault();
+				console.log('ds');
+				reader.result = '';
+				delBtn.classList.remove("active");
+				img.setAttribute("src", img.getAttribute('data-placeholder'))
+			});
+		}
 	}
 	if (window.innerWidth < 1000) {
 		console.log("ok");

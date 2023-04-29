@@ -1,5 +1,4 @@
 .anket {
-
     &__title {
     }
 
@@ -8,15 +7,20 @@
 
     &__main {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
 
     &__block {
+        margin-top: 16px;
+        margin-bottom: 25px;
     }
 
     &__main-photo {
-        width: 33%;
+        width: 32%;
         position: relative;
+        min-width: 236px;
+        margin-right: 5px;
     }
 
     &__main-photo-delete {
@@ -30,6 +34,9 @@
         z-index: 1;
         cursor: pointer;
         transition: .3s;
+        padding: 5px;
+        background: #Fff;
+        border-radius: 5px;
         svg {
             fill: #000;
             width: 25px;
@@ -84,11 +91,21 @@
     }
 
     &__main-info {
+        width: 65.33%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
     }
 
     &__main-info-item {
+        width: 46.4%;
+        padding: 0 2.5px;
+        min-width: 150px;
     }
 
     &__main-info-input {
+        font-family: Circe;
+        font-size: 18px;
+        text-align: center;
     }
 }
